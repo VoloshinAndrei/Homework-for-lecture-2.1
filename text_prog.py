@@ -1,4 +1,4 @@
-class domestic_animals:
+class DomesticAnimals:
     weight = 10  # kg
     height = 50  # cm
     favorite_food = None
@@ -7,7 +7,7 @@ class domestic_animals:
         self.weight += value
 
 
-class cows(domestic_animals):
+class Cows(DomesticAnimals):
     weight = 100  # kg
     height = 100  # cm
 
@@ -16,7 +16,7 @@ class cows(domestic_animals):
         self.weight -= 0.5
 
 
-class goats(domestic_animals):
+class Goats(DomesticAnimals):
     weight = 50  # kg
 
     def give_milk(self):
@@ -24,7 +24,7 @@ class goats(domestic_animals):
         self.weight -= 0.3
 
 
-class sheep(domestic_animals):
+class Sheep(DomesticAnimals):
     weight = 50  # kg
 
     def give_wool(self):
@@ -32,7 +32,7 @@ class sheep(domestic_animals):
         self.weight -= 10
 
 
-class pigs(domestic_animals):
+class Pigs(DomesticAnimals):
     weight = 70  # kg
     height = 30  # cm
 
@@ -41,7 +41,7 @@ class pigs(domestic_animals):
         self.weight = 0
 
 
-class ducks(domestic_animals):
+class Ducks(DomesticAnimals):
     height = 30  # cm
 
     def kill_duck(self):
@@ -49,7 +49,7 @@ class ducks(domestic_animals):
         self.weight = 0
 
 
-class chickens(domestic_animals):
+class Chickens(DomesticAnimals):
     weight = 7
     height = 20  # cm
 
@@ -62,21 +62,23 @@ class chickens(domestic_animals):
         self.weight -= 0.1
 
 
-class geese(domestic_animals):
+class Geese(DomesticAnimals):
     weight = 15
     height = 20  # cm
 
-    def save_Rome(self):
+    def save_rome(self):
         print("The geese have saved Rome!!!")
+        self.weight += 1
 
     def give_feathers(self):
         print("You got some feathers and you can make a pen!")
+        self.weight += 0.5
 
 
-x1 = cows()
+x1 = Cows()
 print(x1.weight)
 x1.give_milk()
 print(x1.weight)
 
-y1 = geese()
-y1.save_Rome()
+y1 = Geese()
+y1.save_rome()
