@@ -29,11 +29,16 @@ class BirdAnimal(DomesticAnimals):
 
 
 x1 = LargeAnimal("cows", "Буренка", "Сено", 100, 500)
-print(x1.weight)
+# print(x1.weight)
 x1.give_meat()
-print(x1.weight)
+# print(x1.weight)
+
+x2 = LargeAnimal("goats", "Буренка", "Сено", 100, 500)
+print(x2.animal_group)
+x2.animal_group = "cows"
+print(x2.animal_group)
 
 y1 = BirdAnimal("duck", "ГуГу", "трава", 40, 20)
-print(y1.weight)
+# print(y1.weight)
 y1.give_feather()
-print(y1.weight)
+# print(y1.weight)
